@@ -26,6 +26,7 @@ function App() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt }),
+        credentials: "include",
       };
 
       const res = await fetch("http://54.210.143.215:5000/ask", requestOptions);

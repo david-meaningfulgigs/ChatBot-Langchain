@@ -1,6 +1,3 @@
-// require("dotenv").config();
-// const express = require("express");
-// const { Configuration, OpenAIApi } = require("openai");
 import express from "express";
 import { OpenAI } from "langchain/llms/openai";
 import { BufferMemory, ChatMessageHistory } from "langchain/memory";
