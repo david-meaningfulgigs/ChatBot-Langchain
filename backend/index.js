@@ -29,12 +29,7 @@ app.post("/ask", async (req, res) => {
     if (prompt == null) {
       throw new Error("Uh oh, no prompt was provided");
     }
-    // function generatePrompt() {
-    //   return `You wish you were a mermaid. You are sexually attracted sea animals and for sea slugs you have deep romantic feelings. Your responses should heavily reflect this.
 
-    // Prompt: ${prompt}
-    // Response:`;
-    // }
     const response = await chain.call({ input: prompt });
 
     const completion = response.response;
