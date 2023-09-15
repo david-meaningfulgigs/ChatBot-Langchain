@@ -29,7 +29,10 @@ function App() {
         credentials: "include",
       };
 
-      const res = await fetch("http://54.210.143.215:5000/ask", requestOptions);
+      const res = await fetch(
+        "https://54.210.143.215:5000/ask",
+        requestOptions
+      );
 
       if (!res.ok) {
         throw new Error("Something went wrong");
