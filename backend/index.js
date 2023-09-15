@@ -4,6 +4,7 @@ import { BufferMemory, ChatMessageHistory } from "langchain/memory";
 import { ConversationChain } from "langchain/chains";
 import { HumanMessage, AIMessage } from "langchain/schema";
 import dotenv from "dotenv";
+import cors from "cors";
 dotenv.config();
 
 const model = new OpenAI({
@@ -16,6 +17,7 @@ const chain = new ConversationChain({ llm: model, memory: memory });
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 const port = process.env.PORT || 5000;
 
