@@ -28,7 +28,7 @@ function App() {
         body: JSON.stringify({ prompt }),
       };
 
-      const res = await fetch("http://54.210.143.215:5000/ask", requestOptions);
+      const res = await fetch("http://localhost:5000/ask", requestOptions);
 
       if (!res.ok) {
         throw new Error("Something went wrong");
